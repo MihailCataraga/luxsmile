@@ -67,7 +67,7 @@ export default function Navbar(props) {
                                 <NavLink to='/ru/igienaOrala'>Гигиена полости рта</NavLink>
                                 <NavLink to='/ru/implantologia'>Имплантология</NavLink>
                                 <NavLink to='/ru/parodantologie'>Пародонтология</NavLink>
-                                <NavLink to='/ruortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
+                                <NavLink to='/ru/ortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
                                 <NavLink to='/ru/imagisticaDentara'>Стоматологическая визуализация</NavLink>
                                 <NavLink to='/ru/stomatologieCopii'>Детская стоматология</NavLink>
                             </nav>
@@ -115,7 +115,7 @@ export default function Navbar(props) {
                                             <NavLink to='/ru/igienaOrala'>Гигиена полости рта</NavLink>
                                             <NavLink to='/ru/implantologia'>Имплантология</NavLink>
                                             <NavLink to='/ru/parodantologie'>Пародонтология</NavLink>
-                                            <NavLink to='/ruortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
+                                            <NavLink to='/ru/ortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
                                             <NavLink to='/ru/imagisticaDentara'>Стоматологическая визуализация</NavLink>
                                             <NavLink to='/ru/stomatologieCopii'>Детская стоматология</NavLink>
                                         </nav>
