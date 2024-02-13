@@ -1,0 +1,242 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15vw;
+    margin: 10px 0;
+    a{
+        text-decoration: none;
+        .logo{
+            display: flex;
+            align-items: center;
+            .logoIcon{
+                color: $blueColor;
+                font-size: 30px;
+                margin: 5px;
+            }
+            h2{
+                color: $blueColor;
+                font-size: 32px;
+                margin: 10px 0;
+            }
+        }
+    }
+    .navLinks{
+        nav{
+            display: flex;
+            align-items: center;
+            div{
+                position: relative;
+                margin: 0 20px;
+                font-size: 18px;
+                color: $blackColor;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                .icon{
+                    margin-left: 5px;
+                }
+                .services{
+                    position: absolute;
+                    z-index: 2;
+                    top: 20px;
+                    left: -50px;
+                    border-top: none;
+                    padding-top: 20px;
+                    background-color: #ffffff;
+                    nav{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0 20px;
+                        background-color: #ffffff;
+                        a{
+                            margin: 5px;
+                            color: $blackColor;
+                        }
+                        a:hover{
+                            color: $blueColor;
+                        }
+                        .active{
+                            color: $blueColor;
+                        }
+                    }
+                }
+            }
+            div:hover{
+                color: $blueColor;
+            }
+            a{
+                margin: 0 20px;
+                font-size: 18px;
+                color: $blackColor;
+            }
+            a:hover{
+                color: $blueColor;
+            }
+            .active{
+                color: $blueColor;
+            }
+            .languages{
+                position: relative;
+                
+                img{
+                    width: 30px;
+                    cursor: pointer;
+                }
+                .allLanguages{
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+                    margin: 0;
+                    display: flex;
+                    justify-content: center;
+                    a:nth-child(1){
+                        margin-right: 5px;
+                    }
+                    a:nth-child(2){
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .navbar{
+        padding: 0 2vw;
+        .navLinks{
+            nav{
+                div{
+                    margin: 0 5px;
+                    .services{
+                        left: -40px;
+                    }
+                }
+                a{
+                    margin: 0 5px;
+                }
+                .languages{                 
+                    .allLanguages{
+                        left: -5px;
+                        flex-direction: column;
+                        a:nth-child(1){
+                            margin-right: 5px;
+                        }
+                        a:nth-child(2){
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .navbar{
+        padding: 0 2vw;
+        .navLinks{
+            nav{
+                div{
+                    margin: 0 5px;
+                    .services{
+                        left: -40px;
+                    }
+                }
+                a{
+                    margin: 0 5px;
+                }
+                .languages{                 
+                    .allLanguages{
+                        left: -5px;
+                        flex-direction: column;
+                        a:nth-child(1){
+                            margin-right: 5px;
+                        }
+                        a:nth-child(2){
+                            margin: 0 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .miniMenuBox{
+            margin-right: 2vw;
+            position: relative;
+            .icon{
+                font-size: 24px;
+            }
+            .allLanguages{
+                position: absolute;
+                top: 2px;
+                left: -100px;
+                display: flex;
+                justify-content: center;
+                a{
+                    img{
+                        width: 30px;
+                    }
+                }
+                a:nth-child(1){
+                    margin-right: 5px;
+                }
+                a:nth-child(2){
+                    margin: 0 10px;
+                }
+            }
+            .miniMenu{
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                nav{
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    z-index: 2;
+                    background-color: #ffffff;
+                    border: 1px solid $blueColor;
+                    color: $blackColor;
+                    right: 0px;
+                    width: 80px;
+                    a{
+                        margin: 5px 10px;
+                        color: $blackColor;
+                    }
+                    a:hover{
+                        color: $blueColor;
+                    }
+                    .active{
+                        color: $blueColor;
+                    }
+                    .servicesBoxMini{
+                        margin: 5px 10px;
+                        
+                        .services{
+                            position: absolute;
+                            right: 80px;
+                            top: -1px;
+                            
+                            nav{
+                                background-color: $bgColor;
+                                border: 1px solid $blueColor;
+                                width: 150px;
+                                a{
+                                    margin: 5px 10px;
+                                    color: $blackColor;
+                                }
+                                a:hover{
+                                    color: $blueColor;
+                                }
+                                .active{
+                                    color: $blueColor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

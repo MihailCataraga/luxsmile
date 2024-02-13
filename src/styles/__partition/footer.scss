@@ -1,0 +1,8 @@
+.allContent {
+    overflow-y: auto;
+    max-height: 350px;
+    .facebookContent{
+        display: flex;
+        flex-direction: column;
+    }
+}

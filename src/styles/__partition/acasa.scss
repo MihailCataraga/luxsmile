@@ -1,0 +1,401 @@
+.home{
+    .main{
+        position: relative;
+        img{
+            width: 100%;
+        }
+        .consultation{
+            position: absolute;
+            right: 200px;
+            bottom: -80px;
+            padding: 50px;
+            background-color: #ffffff;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 0 100px 1px $blackColor;
+            border-radius: 20px;
+            h2{
+                font-size: 36px;
+                width: 300px;
+                text-align: center;
+                color: $blackColor;
+            }
+            button{
+                font-size: 18px;
+                background-color: $blueColor;
+                color: $blackColor;
+                padding: 7px 12px;
+                border-radius: 10px;
+                margin-top: 10px;
+                cursor: pointer;
+                border: 2px #ffffff solid;
+            }
+            button:hover{
+                border: 2px $blackColor solid;
+            }
+        }
+    }
+    .wellcome{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 100px 50px 50px 50px;
+        img{
+            width: 40vw;
+        }
+        h1{
+            text-align: center;
+            width: 300px;
+            font-size: 36px;
+            margin: auto;
+            color: $blackColor;
+        }
+    }
+    .presentation{
+        margin: 50px 50px;
+        font-size: 24px;
+        color: $blackColor;
+        span{
+            font-size: 36px;
+            color: $blueColor;
+        }
+    }
+    .services{
+        background-color: $bgColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            font-size: 36px;
+            margin: 20px;
+            width: 500px;
+            text-align: center;
+        }
+        .serviceBox{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 0;
+            a{
+                text-decoration: none;
+                .service{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    width: 32vw;
+                    height: 20vh;
+                    padding: 30px 0;
+                    margin: 0;
+                    img{
+                        width: 100px;
+                    }
+                    h4{
+                        font-size: 18px;
+                        width: 300px;
+                        text-align: center;
+                        color: $blackColor;
+                    }
+                }
+            
+            }
+            a:nth-child(-n + 3){
+                border-bottom: 1px solid $blackColor;
+            }
+            a:nth-child(-n + 2){
+                border-right: 1px solid $blackColor;
+            }
+            a:nth-child(5){
+                border-right: 1px solid $blackColor;
+                border-left: 1px solid $blackColor;
+            }
+            
+        }
+    }
+    .appointment{
+        padding: 70px;
+        background-color: $bgColor;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .info{
+            background-image: url('../../assets/img/filtru.png'), url('../../assets/img/appointment.png');
+            backdrop-filter: drop-shadow(5px);
+            background-repeat: no-repeat;
+            border-radius: 15px;
+            height: 430px;
+            width: 390px;
+            .first{
+                padding-top: 170px;
+                margin: 0 0 0 80px;
+            }
+            p{
+                color: #ffffff;
+                margin: 10px 0;
+                font-size: 16px;
+                margin-left: 80px;
+            }
+            .bigSize{
+                font-size: 22px;
+            }
+        }
+        form{
+            width: 60vw;
+            background-color: #ffffff;
+            border-radius: 15px;
+            h3{
+                color: $blackColor;
+                font-size: 25px;
+                margin: 20px 50px;
+            }
+            input{
+                margin: 10px 25px;
+                width: calc(100% - 80px);
+                height: 48px;
+                border: 2px solid #c2c2c2;
+                border-radius: 10px;
+                padding-left: 20px;
+                font-size: 14px;
+            }
+            select{
+                margin: 10px 25px;
+                width: calc(100% - 55px);
+                height: 48px;
+                border: 2px solid #c2c2c2;
+                border-radius: 10px;
+                padding-left: 20px;
+                font-size: 14px;
+                option{
+                    padding: 5px;
+                }
+                option:hover{
+                    background-color: $blueColor;
+                }
+            }
+            button{
+                margin: 50px 0;
+                font-size: 18px;
+                margin-left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 5px 20px;
+                border-radius: 5px;
+                background-color: #18A89D;
+                border: 1px solid #ffffff;
+                color: #ffffff;
+                cursor: pointer;
+            }
+            button:hover{
+                border: 1px solid $blackColor;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .home{
+        .main{
+            .consultation{
+                right: 50px;
+                bottom: -40px;
+                padding: 20px 10px;
+                h2{
+                    font-size: 28px;
+                    text-align: center;
+                    color: $blackColor;
+                }
+                button{
+                    font-size: 14px;
+                }
+            }
+        }
+        .wellcome{
+            margin: 80px 50px 50px 50px;
+            h1{
+                width: 200px;
+                font-size: 28px;
+            }
+        }
+        .presentation{
+            font-size: 20px;
+            span{
+                font-size: 28px;
+            }
+        }
+        .services{
+            h2{
+                font-size: 28px;
+            }
+            .serviceBox{
+                a{
+                    .service{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 32vw;
+                        height: 20vh;
+                        padding: 30px 0;
+                        margin: 0;
+                        img{
+                            width: 100px;
+                        }
+                        h4{
+                            font-size: 16px;
+                            width: 200px;
+                        }
+                    }
+                
+                }
+            }
+        }
+        .appointment{
+            padding: 50px;
+            .info{
+                height: 400px;
+                width: 390px;
+                .first{
+                    margin: 0 0 0 40px;
+                }
+                p{
+                    font-size: 14px;
+                    margin-left: 40px;
+                }
+                .bigSize{
+                    font-size: 18px;
+                }
+            }
+            form{
+                h3{
+                    font-size: 20px;
+                }
+                input{
+                    height: 36px;
+                }
+                select{
+                    height: 36px;
+                    option{
+                        padding: 2px;
+                    }
+                    option:hover{
+                        background-color: $blueColor;
+                    }
+                }
+                button{
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 650px) {
+    .home{
+        .main{
+            .consultation{
+                display: none;
+            }
+        }
+        .wellcome{
+            margin: 40px 25px 25px 25px;
+            h1{
+                width: 50%;
+                font-size: 20px;
+            }
+        }
+        .presentation{
+            margin: 25px;
+            font-size: 16px;
+            span{
+                font-size: 20px;
+            }
+        }
+        .services{
+            h2{
+                font-size: 20px;
+                width: initial;
+                text-align: center;
+            }
+            .serviceBox{
+                a{
+                    .service{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 45vw;
+                        height: 20vh;
+                        padding: 30px 0;
+                        margin: 0;
+                        img{
+                            width: 100px;
+                        }
+                        h4{
+                            font-size: 14px;
+                            width: 150px;
+                        }
+                    }
+                }
+                a:nth-child(-n + 4){
+                    border-bottom: 1px solid $blackColor;
+                }
+                a:nth-child(2){
+                    border-right: none;
+                }
+                a:nth-child(3){
+                    border-right: 1px solid $blackColor;
+                }
+                a:nth-child(5){
+                    border-right: 1px solid $blackColor;
+                    border-left: none;
+                }
+            }
+        }
+        .appointment{
+            padding: 50px;
+            flex-direction: column;
+            .info{
+                height: 400px;
+                width: 390px;
+                border-radius: 0;
+                .first{
+                    margin: 0 0 0 40px;
+                }
+                p{
+                    font-size: 14px;
+                    margin-left: 40px;
+                }
+                .bigSize{
+                    font-size: 18px;
+                }
+            }
+            form{
+                margin-top: 20px;
+                width: 100%;
+                h3{
+                    font-size: 18px;
+                    text-align: center;
+                }
+                input{
+                    height: 30px;
+                }
+                select{
+                    position: relative;
+                    margin: 10px 25px;
+                    width: calc(100% - 55px);
+                    height: 48px;
+                    border: 2px solid #c2c2c2;
+                    border-radius: 10px;
+                    padding: 0 20px;
+                    font-size: 14px;
+                }
+                select option {
+                    font-size: 12px;
+                }
+                button{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
