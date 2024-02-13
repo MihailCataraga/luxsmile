@@ -42,8 +42,7 @@ export default function Footer() {
                             height="499" 
                             frameborder="0" 
                             allowfullscreen="true" 
-                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
-                            allowFullScreen="true">
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                         </iframe>
                     </div>
                 </div>

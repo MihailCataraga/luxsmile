@@ -1,2 +1,1 @@
 icon in index.html cu un dinte
-mini menu and responsive!!!

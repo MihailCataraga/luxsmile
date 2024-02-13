@@ -48,7 +48,7 @@ export default function Navbar(props) {
     }, [openLanguages, service, href, miniMenu, serviceMini]);
   return (
     <div className='navbar'>
-        <NavLink to='/'>
+        <NavLink to='/ru/'>
             <div className='logo'>
                 <FaTooth className='logoIcon'/>
                 <h2>LuxSmail</h2>
@@ -57,24 +57,24 @@ export default function Navbar(props) {
         {width > 650 ?
             <div className='navLinks'>
                 <nav>
-                    <NavLink to='/'>Дом</NavLink>
-                    <NavLink to='/despreNoi'>О нас</NavLink>
+                    <NavLink to='/ru/'>Дом</NavLink>
+                    <NavLink to='/ru/despreNoi'>О нас</NavLink>
                     <div className='servicesBox' onClick={() => {setService(true)}}>
                         Услуги 
                         {<FaChevronDown className='icon' />}
                         {service && <div className='services'>
                             <nav>
-                                <NavLink to='/igienaOrala'>Гигиена полости рта</NavLink>
-                                <NavLink to='/implantologia'>Имплантология</NavLink>
-                                <NavLink to='/parodantologie'>Пародонтология</NavLink>
-                                <NavLink to='ortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
-                                <NavLink to='/imagisticaDentara'>Стоматологическая визуализация</NavLink>
-                                <NavLink to='/stomatologieCopii'>Детская стоматология</NavLink>
+                                <NavLink to='/ru/igienaOrala'>Гигиена полости рта</NavLink>
+                                <NavLink to='/ru/implantologia'>Имплантология</NavLink>
+                                <NavLink to='/ru/parodantologie'>Пародонтология</NavLink>
+                                <NavLink to='/ruortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
+                                <NavLink to='/ru/imagisticaDentara'>Стоматологическая визуализация</NavLink>
+                                <NavLink to='/ru/stomatologieCopii'>Детская стоматология</NavLink>
                             </nav>
                         </div>}
                     </div>
-                    <NavLink to='/echipa'>Команда</NavLink>
-                    <NavLink to='/contacte'>Контакты</NavLink>
+                    <NavLink to='/ru/echipa'>Команда</NavLink>
+                    <NavLink to='/ru/contacte'>Контакты</NavLink>
                     <div className='languages' onClick={() => {setOpenLanguages(!openLanguages)}}>
                         {flag ? 
                             <img src={Ru} alt='Language Flag' /> :
@@ -106,23 +106,23 @@ export default function Navbar(props) {
                         </div>
                         <div className='miniMenu'>
                             <nav>
-                                <NavLink to='/'>Дом</NavLink>
-                                <NavLink to='/despreNoi'>О нас</NavLink>
+                                <NavLink to='/ru/'>Дом</NavLink>
+                                <NavLink to='/ru/despreNoi'>О нас</NavLink>
                                 <div className='servicesBoxMini' onClick={(e) => {e.stopPropagation(); setServiceMini(!serviceMini)}}>
                                     Услуги 
                                     {serviceMini && <div className='services'>
                                         <nav>
-                                            <NavLink to='/igienaOrala'>Гигиена полости рта</NavLink>
-                                            <NavLink to='/implantologia'>Имплантология</NavLink>
-                                            <NavLink to='/parodantologie'>Пародонтология</NavLink>
-                                            <NavLink to='ortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
-                                            <NavLink to='/imagisticaDentara'>Стоматологическая визуализация</NavLink>
-                                            <NavLink to='/stomatologieCopii'>Детская стоматология</NavLink>
+                                            <NavLink to='/ru/igienaOrala'>Гигиена полости рта</NavLink>
+                                            <NavLink to='/ru/implantologia'>Имплантология</NavLink>
+                                            <NavLink to='/ru/parodantologie'>Пародонтология</NavLink>
+                                            <NavLink to='/ruortodontiaDentara'>Стоматологическая ортодонтия</NavLink>
+                                            <NavLink to='/ru/imagisticaDentara'>Стоматологическая визуализация</NavLink>
+                                            <NavLink to='/ru/stomatologieCopii'>Детская стоматология</NavLink>
                                         </nav>
                                     </div>}
                                 </div>
-                                <NavLink to='/echipa'>Команда</NavLink>
-                                <NavLink to='/contacte'>Контакты</NavLink>
+                                <NavLink to='/ru/echipa'>Команда</NavLink>
+                                <NavLink to='/ru/contacte'>Контакты</NavLink>
                             </nav>
                             
                         </div>

@@ -14,11 +14,8 @@ import Footer from '../components/Footer';
 
 export default function Acasa() {
     const scrollTo = () => {
-        window.scrollTo({
-            top: 2200,
-            left: 0,
-            behavior: "smooth",
-        })
+        const element = document.getElementById('scroll')
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   return (
     <div className='home'>
@@ -26,13 +23,13 @@ export default function Acasa() {
         <div className='main'>
             <img src={Principala} alt='Imaginea principala' />
             <div className='consultation'>
-                <h2>Solicită o consultație.</h2>
+                <h2>SOLICITĂ O CONSULTAȚIE.</h2>
                 <button onClick={scrollTo}>VINO LA O CONSULTAȚIE GRATUITĂ</button>
             </div>
         </div>
         <div className='wellcome'>
             <img src={BunVenit} alt='Imagine de bun venit' />
-            <h1>Bine ai venit! Ești doar la un pas de zâmbetul la care ai visat</h1>
+            <h1>BINE AI VENIT! EȘTI DOAR LA UN PAS DE ZÂMBETUL LA CARE AI VISAT.</h1>
         </div>
         <p className='presentation'><span>Stomatologia LuxSmile</span> O destinație premium pentru sănătatea și frumusețea zâmbetului dumneavoastră. Cu echipă expertă și tehnologie avansată, oferim tratamente stomatologice de înaltă calitate într-un mediu relaxant și prietenos. De la igienizare dentară la proceduri complexe, suntem aici pentru a vă îngriji și a vă îmbunătăți zâmbetul. Contactați-ne astăzi pentru un zâmbet sănătos și strălucitor!</p>
         <div className='services'>
@@ -76,7 +73,7 @@ export default function Acasa() {
                 </Link>
             </div>      
         </div>
-        <div className='appointment'>
+        <div className='appointment' id='scroll'>
             <div className='info'>
                 <p className='first'>Telefon:</p>
                 <p className='bigSize'>+373 60 *** ***</p>
