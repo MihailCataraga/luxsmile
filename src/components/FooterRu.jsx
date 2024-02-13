@@ -12,20 +12,20 @@ export default function Footer() {
                     <FaTooth className='icon' />
                     <h3>LuxSmile</h3>
                 </div>
-                <p>Sănătatea pacientului și confortul său maxim nu este doar o chestiune a activităților zilnice de rutină ale specialiștilor noștri. Aceasta este o stie de onoare pentru fiecare membru al echipei noastre și o întrebare despre reputația clinicii «Lux Smile». Știm în mod clar faptul că echipamentul dentar modern nu este un lux, ci o necesitate elementară.</p>
+                <p>Здоровье и максимальный комфорт пациента – это не только вопрос повседневной деятельности наших специалистов. Это честь для каждого члена нашей команды и вопрос репутации клиники «Люкс Смайл». Мы четко знаем, что современное стоматологическое оборудование – это не роскошь, а предмет первой необходимости.</p>
             </div>
             <div className='links'>
-                <h3>Navigare pe site</h3>
+                <h3>Навигация по сайту</h3>
                 <nav>
-                    <Link to='/'>Acasă</Link>
-                    <Link to='/despreNoi'>Despre noi</Link>
-                    <Link to='/echipa'>Echipă noastră</Link>
-                    <Link to='/contacte'>Contact</Link>
-                    <Link to='/politics'>Politica de Confidențialitate</Link>
+                    <Link to='/'>Дом</Link>
+                    <Link to='/despreNoi'>О нас</Link>
+                    <Link to='/echipa'>Наша команда</Link>
+                    <Link to='/contacte'>Контакт</Link>
+                    <Link to='/politics'>Политика конфиденциальности</Link>
                 </nav>
             </div>
             <div className='facebook'>
-                <h3>Știri pe Facebook</h3>
+                <h3>Новости на Facebook</h3>
                 <div className='allContent'>
                     <div className='facebookContent'>
                         <iframe 
@@ -46,25 +46,25 @@ export default function Footer() {
                 </div>
             </div>
             <div className='contactsBox'>
-                <h3>Contact Information</h3>
+                <h3>Контактная информация</h3>
                 <div className='contacts'>
-                    <p>Telefon:</p>
+                    <p>Телефон:</p>
                     <p className='bigSize'>+373 60 *** ***</p>
                     <p className='bigSize'>+373 22 *** ***</p>
-                    <p>Program de lucru:</p>
-                    <p className='bigSize'>Luni-Vineri: 9.00 - 19.00</p>
-                    <p>Locația noastră:</p>
-                    <p className='bigSize'>Str. Ion Creangă 7, Chișinău</p>
+                    <p>Программа работы:</p>
+                    <p className='bigSize'>Понедельник-Пятница: 9.00 - 19.00</p>
+                    <p>Наше место нахождения:</p>
+                    <p className='bigSize'>ул. Иона Крянгэ 7, Кишинев</p>
                 </div>
             </div>
         </div>
         <div className='security'>
             <div className='copyright'>
                 <FaRegCopyright className='icon' />
-                <p>2015-2024 «Lux Smile»®. Toate drepturile rezervate.</p>
+                <p>2015-2024 «Люкс Смайл»®. Все права защищены.</p>
             </div>
             <div className='politics'>
-                <Link to='/politics'>Politica de Confidențialitate</Link>
+                <Link to='/politics'>Политика конфиденциальности</Link>
             </div>
         </div>
     </div>

@@ -1,8 +1,223 @@
-.allContent {
-    overflow-y: auto;
-    max-height: 350px;
-    .facebookContent{
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #091E3E;
+    .sections{
         display: flex;
-        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2vw;
+        padding: 40px;
+        .info{
+            width: 15vw;
+            .logo{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $bgColor;
+                margin-bottom: 20px;
+                .icon{
+                    font-size: 24px;
+                    margin-right: 5px;
+                }
+                h3{
+                    font-size: 24px;
+                }
+            }
+            p{
+                color: $bgColor;
+                font-size: 18px;
+                line-height: 1.3;
+            }
+        }
+        .links{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $bgColor;
+            h3{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            nav{
+                display: flex;
+                flex-direction: column;
+                padding-left: 50px;
+                a{
+                    color: $bgColor;
+                    font-size: 16px;
+                    text-decoration: none;
+                    margin-bottom: 8px;
+                }
+            }
+        }
+        .facebook{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $bgColor;
+            h3{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .allContent {
+                overflow-y: auto;
+                max-height: 350px;
+                background-color: $bgColor;
+                .facebookContent{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .allContent::-webkit-scrollbar {
+                width: 8px;
+                background-color: #9b9b9b; /* Schimbă cu culoarea dorită pentru fundalul barei de derulare */
+              }
+              
+              .allContent::-webkit-scrollbar-thumb {
+                background-color: #474747; /* Schimbă cu culoarea dorită pentru cursorul barei de derulare */
+                border-radius: 5px;
+              }
+        }
+        .contactsBox{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: $bgColor;
+            h3{
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            .contacts{
+                margin-left: 40px;
+                p{
+                    font-size: 16px;
+                    margin-bottom: 8px;
+                }
+                .bigSize{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .security{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid $blueColor;
+        width: 70vw;
+        .copyright{
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            color: $bgColor;
+            .icon{
+                margin-right: 5px;
+                font-size: 16px;
+            }
+            p{
+                font-size: 16px;
+            }
+        }
+        .politics{
+            padding: 10px;
+            a{
+                font-size: 16px;
+                color: $bgColor;
+                text-decoration: none;
+            }
+        }
     }
 }
+
+@media screen and (max-width: 1250px) {
+    .footer{
+        .sections{
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            .info{
+                display: none;
+            }
+        }
+        .security{
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 80vw;
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #091E3E;
+        .sections{
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 2vw;
+            padding: 40px;
+            .links{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3{
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                }
+                nav{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0;
+                    a{
+                        color: $bgColor;
+                        font-size: 16px;
+                        text-decoration: none;
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+            .facebook{
+                display: none;
+            }
+            .contactsBox{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h3{
+                    font-size: 20px;
+                    margin-bottom: 15px;
+                }
+                .contacts{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0;
+                    p{
+                        font-size: 14px;
+                        margin-bottom: 8px;
+                    }
+                    .bigSize{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        .security{
+            justify-content: center;
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+

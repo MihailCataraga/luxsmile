@@ -1,1 +1,1 @@
-icon in index.html cu un dinte
+favicon in index.html cu un dinte
