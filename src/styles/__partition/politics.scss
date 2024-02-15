@@ -1,0 +1,40 @@
+.politics{
+    main{
+        padding: 50px 20%;
+        h1{
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        ol{
+            li{
+                margin-top: 15px;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .politics{
+        main{
+            padding: 50px 10%;
+            h1{
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .politics{
+        main{
+            padding: 50px 5%;
+            h1{
+                font-size: 24px;
+                text-align: center;
+            }
+        }
+    }
+}

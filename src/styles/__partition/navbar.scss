@@ -1,31 +1,44 @@
-.navbar{
+.visible {
+    position: fixed;
+    z-index: 1000;
+}
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15vw;
-    margin: 10px 0;
-    a{
+    padding: 10px 15%;
+    background-color: #ffffff;
+    width: 70%;
+    border-bottom: 2px solid $blueColor;
+    a {
         text-decoration: none;
-        .logo{
+
+        .logo {
             display: flex;
             align-items: center;
-            .logoIcon{
+
+            .logoIcon {
                 color: $blueColor;
                 font-size: 30px;
                 margin: 5px;
             }
-            h2{
+
+            h2 {
                 color: $blueColor;
                 font-size: 32px;
                 margin: 10px 0;
             }
         }
     }
-    .navLinks{
-        nav{
+
+    .navLinks {
+        nav {
             display: flex;
             align-items: center;
-            div{
+            .servicesBox.blue{
+                color: $blueColor;
+            }
+            .servicesBox {
                 position: relative;
                 margin: 0 20px;
                 font-size: 18px;
@@ -33,10 +46,12 @@
                 display: flex;
                 align-items: center;
                 cursor: pointer;
-                .icon{
+
+                .icon {
                     margin-left: 5px;
                 }
-                .services{
+
+                .services {
                     position: absolute;
                     z-index: 2;
                     top: 20px;
@@ -44,57 +59,69 @@
                     border-top: none;
                     padding-top: 20px;
                     background-color: #ffffff;
-                    nav{
+
+                    nav {
                         display: flex;
                         flex-direction: column;
                         align-items: flex-start;
                         padding: 0 20px;
                         background-color: #ffffff;
-                        a{
+
+                        a {
                             margin: 5px;
                             color: $blackColor;
                         }
-                        a:hover{
+
+                        a:hover {
                             color: $blueColor;
                         }
-                        .active{
+
+                        .active {
                             color: $blueColor;
                         }
                     }
                 }
             }
-            div:hover{
+
+            div:hover {
                 color: $blueColor;
             }
-            a{
+
+            a {
                 margin: 0 20px;
                 font-size: 18px;
                 color: $blackColor;
             }
-            a:hover{
+
+            a:hover {
                 color: $blueColor;
             }
-            .active{
+
+            .active {
                 color: $blueColor;
             }
-            .languages{
+
+            .languages {
                 position: relative;
-                
-                img{
+
+                img {
                     width: 30px;
                     cursor: pointer;
                 }
-                .allLanguages{
+
+                .allLanguages {
                     position: absolute;
                     top: 0;
                     left: -20px;
                     margin: 0;
                     display: flex;
                     justify-content: center;
-                    a:nth-child(1){
+
+                    a:nth-child(1) {
                         margin-right: 5px;
                     }
-                    a:nth-child(2){
+
+                    a:nth-child(2) {
                         margin: 0 10px;
                     }
                 }
@@ -104,27 +131,37 @@
 }
 
 @media screen and (max-width: 1250px) {
-    .navbar{
-        padding: 0 2vw;
-        .navLinks{
-            nav{
-                div{
+    .visible {
+        position: fixed;
+        z-index: 1000;
+    }
+    .navbar {
+        padding: 10px 5%;
+        width: 90%;
+        .navLinks {
+            nav {
+                div {
                     margin: 0 5px;
-                    .services{
+
+                    .services {
                         left: -40px;
                     }
                 }
-                a{
+
+                a {
                     margin: 0 5px;
                 }
-                .languages{                 
-                    .allLanguages{
+
+                .languages {
+                    .allLanguages {
                         left: -5px;
                         flex-direction: column;
-                        a:nth-child(1){
+
+                        a:nth-child(1) {
                             margin-right: 5px;
                         }
-                        a:nth-child(2){
+
+                        a:nth-child(2) {
                             margin: 0 5px;
                         }
                     }
@@ -135,62 +172,80 @@
 }
 
 @media screen and (max-width: 650px) {
-    .navbar{
-        padding: 0 2vw;
-        .navLinks{
-            nav{
-                div{
+    .visible {
+        position: fixed;
+        z-index: 1000;
+    }
+    .navbar {
+        padding: 10px 2%;
+        width: 96%;
+        .navLinks {
+            nav {
+                div {
                     margin: 0 5px;
-                    .services{
+
+                    .services {
                         left: -40px;
                     }
                 }
-                a{
+
+                a {
                     margin: 0 5px;
                 }
-                .languages{                 
-                    .allLanguages{
+
+                .languages {
+                    .allLanguages {
                         left: -5px;
                         flex-direction: column;
-                        a:nth-child(1){
+
+                        a:nth-child(1) {
                             margin-right: 5px;
                         }
-                        a:nth-child(2){
+
+                        a:nth-child(2) {
                             margin: 0 5px;
                         }
                     }
                 }
             }
         }
-        .miniMenuBox{
+
+        .miniMenuBox {
             margin-right: 2vw;
             position: relative;
-            .icon{
+
+            .icon {
                 font-size: 24px;
             }
-            .allLanguages{
+
+            .allLanguages {
                 position: absolute;
                 top: 2px;
                 left: -100px;
                 display: flex;
                 justify-content: center;
-                a{
-                    img{
+
+                a {
+                    img {
                         width: 30px;
                     }
                 }
-                a:nth-child(1){
+
+                a:nth-child(1) {
                     margin-right: 5px;
                 }
-                a:nth-child(2){
+
+                a:nth-child(2) {
                     margin: 0 10px;
                 }
             }
-            .miniMenu{
+
+            .miniMenu {
                 display: flex;
                 flex-direction: column;
                 position: relative;
-                nav{
+
+                nav {
                     position: absolute;
                     display: flex;
                     flex-direction: column;
@@ -200,36 +255,43 @@
                     color: $blackColor;
                     right: 0px;
                     width: 80px;
-                    a{
+
+                    a {
                         margin: 5px 10px;
                         color: $blackColor;
                     }
-                    a:hover{
+
+                    a:hover {
                         color: $blueColor;
                     }
-                    .active{
+
+                    .active {
                         color: $blueColor;
                     }
-                    .servicesBoxMini{
+
+                    .servicesBoxMini {
                         margin: 5px 10px;
-                        
-                        .services{
+
+                        .services {
                             position: absolute;
                             right: 80px;
                             top: -1px;
-                            
-                            nav{
+
+                            nav {
                                 background-color: $bgColor;
                                 border: 1px solid $blueColor;
                                 width: 150px;
-                                a{
+
+                                a {
                                     margin: 5px 10px;
                                     color: $blackColor;
                                 }
-                                a:hover{
+
+                                a:hover {
                                     color: $blueColor;
                                 }
-                                .active{
+
+                                .active {
                                     color: $blueColor;
                                 }
                             }

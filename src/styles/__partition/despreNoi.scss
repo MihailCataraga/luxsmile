@@ -1,0 +1,96 @@
+.despreNoi{
+    main{
+        padding: 50px 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 200px;
+        .left{
+            position: relative;
+            #smoll{
+                position: absolute;
+                left: 230px;
+                top: 230px;
+            }
+        }
+        .right{
+            min-width: 30vw;
+            h1{
+                font-size: 36px;
+                margin: 25px 0;
+            }
+            .first{
+                font-size: 20px;
+                line-height: 1.5;
+                font-weight: 500;
+            }
+            p{
+                font-size: 16px;
+                line-height: 1.3;
+                margin-bottom: 15px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .despreNoi{
+        main{
+            padding: 50px 5vw;
+            flex-wrap: wrap;
+            gap: 100px;
+            .left{
+                position: relative;
+                
+                #big{
+                    width: 450px;
+                }
+                #smoll{
+                    left: 170px;
+                    top: 190px;
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .despreNoi{
+        main{
+            padding: 50px 2vw;
+            flex-wrap: wrap;
+            gap: 100px;
+            .left{
+                position: relative;
+                #big{
+                    width: 80vw;
+                }
+                #smoll{
+                    left: 10px;
+                    top: 100px;
+                    width: 250px;
+                    width: 80vw;
+                }
+            }
+            .right{
+                h1{
+                    font-size: 24px;
+                    margin: 25px 0;
+                }
+                .first{
+                    font-size: 18px;
+                    line-height: 1.5;
+                    font-weight: 500;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 1.3;
+                    margin-bottom: 15px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}

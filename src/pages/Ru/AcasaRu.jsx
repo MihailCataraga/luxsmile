@@ -14,11 +14,11 @@ import Footer from '../../components/FooterRu';
 
 export default function AcasaRu() {
     const scrollTo = () => {
-        window.scrollTo({
-            top: 2200,
-            left: 0,
-            behavior: "smooth",
-        })
+        const element = document.getElementById('scroll')
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" })
     }
     return (
         <div className='home'>
@@ -38,37 +38,37 @@ export default function AcasaRu() {
             <div className='services'>
                 <h2>Воспользуйтесь профессионализмом и опытом</h2>
                 <div className='serviceBox'>
-                    <Link to={'/igienaOrala'}>
+                    <Link onClick={scrollToTop} to={'/igienaOrala'}>
                         <div className='service'>
                             <img src={IconServicii1} alt='Изображение для сервиса' />
                             <h4>Гигиена полости рта</h4>
                         </div>
                     </Link>
-                    <Link to={'/implantologia'}>
+                    <Link onClick={scrollToTop} to={'/implantologia'}>
                         <div className='service'>
                             <img src={IconServicii2} alt='Изображение для сервиса' />
                             <h4>Имплантология</h4>
                         </div>
                     </Link>
-                    <Link to={'/parodantologie'}>
+                    <Link onClick={scrollToTop} to={'/parodontologie'}>
                         <div className='service'>
                             <img src={IconServicii3} alt='Изображение для сервиса' />
                             <h4>Пародонтология</h4>
                         </div>
                     </Link>
-                    <Link to={'/ortodontiaDentara'}>
+                    <Link onClick={scrollToTop} to={'/ortodontiaDentara'}>
                         <div className='service'>
                             <img src={IconServicii4} alt='Изображение для сервиса' />
                             <h4>Стоматологическая ортодонтия</h4>
                         </div>
                     </Link>
-                    <Link to={'/imagisticaDentara'}>
+                    <Link onClick={scrollToTop} to={'/imagisticaDentara'}>
                         <div className='service'>
                             <img src={IconServicii5} alt='Изображение для сервиса' />
                             <h4>Стоматологическая визуализация</h4>
                         </div>
                     </Link>
-                    <Link to={'/stomatologieCopii'}>
+                    <Link onClick={scrollToTop} to={'/stomatologieCopii'}>
                         <div className='service'>
                             <img src={IconServicii6} alt='Изображение для сервиса' />
                             <h4>Детская стоматология</h4>
@@ -76,7 +76,7 @@ export default function AcasaRu() {
                     </Link>
                 </div>
             </div>
-            <div className='appointment'>
+            <div className='appointment' id='scroll'>
                 <div className='info'>
                     <p className='first'>Телефон:</p>
                     <p className='bigSize'>+373 60 *** ***</p>

@@ -1,0 +1,88 @@
+.contacte{
+    main{
+        padding: 50px 15vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h1{
+            font-size: 36px;
+            text-align: center;
+        }
+        .contacts{
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: center;
+            .contact{
+                box-shadow: 2px 2px 15px 1px rgb(124, 124, 124);
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px 20px;
+                width: 200px;
+                .icon{
+                    font-size: 40px;
+                    margin-bottom: 20px;
+                }
+                h3{
+                    font-size: 24px;
+                    margin-bottom: 10px;
+                    max-width: 250px;
+                    text-align: center;
+                }
+                .btns{
+                    p{
+                        text-align: center;
+                        margin-top: 10px;
+                    }
+                    .email{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .icon{
+                            font-size: 20px;
+                             margin: 5px;
+                        }
+                        p{
+                            margin-top: 0;
+                        }
+                    }
+                    
+                    .btn{
+                        display: flex;
+                        gap: 10px;
+                        button{
+                            display: flex;
+                            align-items: center;
+                            border: none;
+                            border-radius: 5px;
+                            color: #ffffff;
+                            cursor: pointer;
+                            margin-top: 5px;
+                            .icon{
+                                font-size: 20px;
+                                margin: 5px;
+                            }
+                        }
+                        .whatsapp{
+                            background-color: #1EBEA5;
+                        }
+                        .viber{
+                            background-color: #7360F2;
+                        }
+                        .facebook{
+                            background-color: #1877F2;
+                        }
+                        .instagram{
+                            background: rgb(239,141,53);
+                            background: linear-gradient(90deg, rgba(239,141,53,1) 0%, rgba(216,38,78,1) 52%, rgba(192,27,128,1) 100%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

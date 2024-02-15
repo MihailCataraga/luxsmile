@@ -1,6 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import { FaLocationDot } from "react-icons/fa6";
 import { GiClockwork } from "react-icons/gi";
 import { FaPhone } from "react-icons/fa";
@@ -10,8 +8,10 @@ import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import Navbar from '../../components/NavbarRu';
+import Footer from '../../components/FooterRu';
 
-export default function Contacte() {
+export default function ContacteRu() {
 
 
   const whatsApp = () => {
@@ -39,32 +39,32 @@ export default function Contacte() {
     <div className='contacte'>
       <Navbar link={'/contacte'} />
       <main>
-        <h1>Locația și contactele</h1>
+        <h1>Местоположение и контакты</h1>
         <div className='contacts'>
           <div className='contact'>
             <FaLocationDot className='icon' />
-            <h3>Adresa noastră</h3>
+            <h3>Наш адрес</h3>
             <div className='info'>
-              <p>Strada Ion Creangă 7,</p>
-              <p>Chișinău, Moldova</p>
-              <p>Clinica dentară</p>
-              <p>«LusxSmile»</p>
+              <p>улица Иона Крянгэ 7,</p>
+              <p>Кишинев Молдова</p>
+              <p>Стоматологическая клиника</p>
+              <p>«ЛюксСмайл»</p>
             </div>
             
           </div>
           <div className='contact'>
             <GiClockwork className='icon' />
-            <h3>Program de lucru</h3>
+            <h3>Программа работы</h3>
             <div className='info'>
-              <p>Lun - Vin: 9:00 - 19:00</p>
-              <p>Sâm: 9:00 - 14:00</p>
-              <p>Dum: zi libera</p>
+              <p>Пн - Пт: 9:00 - 19:00</p>
+              <p>Сб: 9:00 - 14:00</p>
+              <p>Вс: свободный день</p>
             </div>
             
           </div>
           <div className='contact'>
             <FaPhone className='icon' />
-            <h3>Linia fierbinte</h3>
+            <h3>Горячая линия</h3>
             <div className='btns'>
               <p>+373 60 *** ***</p>
               <div className='btn'>
@@ -75,7 +75,7 @@ export default function Contacte() {
           </div>
           <div className='contact'>
             <TfiEmail className='icon' />
-            <h3>E-mail și rețele sociale</h3>
+            <h3>Электронная почта и социальные сети</h3>
             <div className='btns'>
               <div className='email'>
                 <MdOutlineMarkEmailRead className='icon' />
@@ -97,7 +97,7 @@ export default function Contacte() {
           />
           <Marker position={[47, 28.85]}>
             <Popup>
-              Aici este locația.
+                Вот это место.
             </Popup>
           </Marker>
         </MapContainer>
