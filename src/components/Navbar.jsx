@@ -135,7 +135,7 @@ export default function Navbar(props) {
                                     <nav>
                                         <NavLink onClick={scrollToTop} to='/'>Acasa</NavLink>
                                         <NavLink onClick={scrollToTop} to='/despreNoi'>Despre Noi</NavLink>
-                                        <div className='servicesBoxMini' onClick={(e) => { e.stopPropagation(); setServiceMini(!serviceMini) }}>
+                                        <div className={`servicesBox ${serviceColor}`} onClick={(e) => { e.stopPropagation(); setServiceMini(!serviceMini) }}>
                                             Servicii
                                             {serviceMini && <div className='services'>
                                                 <nav>
