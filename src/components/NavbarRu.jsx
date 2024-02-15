@@ -150,7 +150,7 @@ export default function Navbar(props) {
                             <nav>
                                 <Link onClick={scrollToTop} className={`${acasa}`} to='/ru/'>Дом</Link>
                                 <Link onClick={scrollToTop} className={`${despreNoi}`} to='/ru/despreNoi'>О нас</Link>
-                                <div className={`servicesBox ${serviceColor}`} onClick={(e) => {e.stopPropagation(); setServiceMini(!serviceMini)}}>
+                                <div className={`servicesBoxMini ${serviceColor}`} onClick={(e) => {e.stopPropagation(); setServiceMini(!serviceMini)}}>
                                     Услуги 
                                     {serviceMini && <div className='services'>
                                         <nav>
