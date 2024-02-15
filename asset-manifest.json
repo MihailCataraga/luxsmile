@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/luxsmile/static/css/main.03646a07.css",
-    "main.js": "/luxsmile/static/js/main.ffa97d07.js",
+    "main.css": "/luxsmile/static/css/main.a024380d.css",
+    "main.js": "/luxsmile/static/js/main.1cb729fb.js",
     "static/media/Principala.jpg": "/luxsmile/static/media/Principala.0cf93590221266d8e74d.jpg",
     "static/media/bunVenit.png": "/luxsmile/static/media/bunVenit.f36765a9e43b23092c15.png",
     "static/media/despreNoi.png": "/luxsmile/static/media/despreNoi.32501c2acd4df4bb3041.png",
@@ -16,11 +16,11 @@
     "static/media/filtru.png": "/luxsmile/static/media/filtru.1387ac80a22fda1a068b.png",
     "static/media/iconServicii4.png": "/luxsmile/static/media/iconServicii4.5c8ca625aea108dfe9cc.png",
     "index.html": "/luxsmile/index.html",
-    "main.03646a07.css.map": "/luxsmile/static/css/main.03646a07.css.map",
-    "main.ffa97d07.js.map": "/luxsmile/static/js/main.ffa97d07.js.map"
+    "main.a024380d.css.map": "/luxsmile/static/css/main.a024380d.css.map",
+    "main.1cb729fb.js.map": "/luxsmile/static/js/main.1cb729fb.js.map"
   },
   "entrypoints": [
-    "static/css/main.03646a07.css",
-    "static/js/main.ffa97d07.js"
+    "static/css/main.a024380d.css",
+    "static/js/main.1cb729fb.js"
   ]
 }
