@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/luxsmile/static/css/main.a024380d.css",
-    "main.js": "/luxsmile/static/js/main.2e1a4ae3.js",
+    "main.css": "/luxsmile/static/css/main.bf847cfb.css",
+    "main.js": "/luxsmile/static/js/main.366dcf99.js",
     "static/media/Principala.jpg": "/luxsmile/static/media/Principala.0cf93590221266d8e74d.jpg",
     "static/media/bunVenit.png": "/luxsmile/static/media/bunVenit.f36765a9e43b23092c15.png",
     "static/media/despreNoi.png": "/luxsmile/static/media/despreNoi.32501c2acd4df4bb3041.png",
@@ -9,18 +9,18 @@
     "static/media/stomatologieCopii.png": "/luxsmile/static/media/stomatologieCopii.bd90f9c8732316615201.png",
     "static/media/ortodontie.png": "/luxsmile/static/media/ortodontie.f923a16b5caf9a498086.png",
     "static/media/igienaOrala.png": "/luxsmile/static/media/igienaOrala.16be4b806ece2307325b.png",
-    "static/media/appointment.png": "/luxsmile/static/media/appointment.18555506491bdda9b1f3.png",
+    "static/media/appointment.png": "/luxsmile/static/media/appointment.09440ebc536156958031.png",
     "static/media/parodontologie.png": "/luxsmile/static/media/parodontologie.8eb0e96712dc279a67d8.png",
     "static/media/figure.png": "/luxsmile/static/media/figure.e9dde9725e51325f7aa4.png",
     "static/media/implantologie.png": "/luxsmile/static/media/implantologie.505eeeff6640e582f6d3.png",
     "static/media/filtru.png": "/luxsmile/static/media/filtru.1387ac80a22fda1a068b.png",
     "static/media/iconServicii4.png": "/luxsmile/static/media/iconServicii4.5c8ca625aea108dfe9cc.png",
     "index.html": "/luxsmile/index.html",
-    "main.a024380d.css.map": "/luxsmile/static/css/main.a024380d.css.map",
-    "main.2e1a4ae3.js.map": "/luxsmile/static/js/main.2e1a4ae3.js.map"
+    "main.bf847cfb.css.map": "/luxsmile/static/css/main.bf847cfb.css.map",
+    "main.366dcf99.js.map": "/luxsmile/static/js/main.366dcf99.js.map"
   },
   "entrypoints": [
-    "static/css/main.a024380d.css",
-    "static/js/main.2e1a4ae3.js"
+    "static/css/main.bf847cfb.css",
+    "static/js/main.366dcf99.js"
   ]
 }
