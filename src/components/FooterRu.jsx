@@ -64,7 +64,7 @@ export default function Footer() {
             <div className='security'>
                 <div className='copyright'>
                     <FaRegCopyright className='icon' />
-                    <p>2015-2024 «Люкс Смайл»®. Все права защищены.</p>
+                    <p>2024 «ЛюксСмайл»®. Все права защищены.</p>
                 </div>
                 <div className='politics'>
                     <Link onClick={scrollToTop} to='/ru/politics'>Политика конфиденциальности</Link>

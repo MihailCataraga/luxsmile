@@ -78,7 +78,7 @@ export default function Navbar(props) {
             <NavLink onClick={scrollToTop} to='/'>
                 <div className='logo'>
                     <FaTooth className='logoIcon' />
-                    <h2>LuxSmail</h2>
+                    <h2>LuxSmile</h2>
                 </div>
             </NavLink>
             {width > 650 ?

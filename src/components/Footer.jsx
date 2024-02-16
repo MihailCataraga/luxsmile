@@ -64,7 +64,7 @@ export default function Footer() {
             <div className='security'>
                 <div className='copyright'>
                     <FaRegCopyright className='icon' />
-                    <p>2015-2024 «Lux Smile»®. Toate drepturile rezervate.</p>
+                    <p>2024 «LuxSmile»®. Toate drepturile rezervate.</p>
                 </div>
                 <div className='politics'>
                     <Link onClick={scrollToTop} to='/politics'>Politica de Confidențialitate</Link>
