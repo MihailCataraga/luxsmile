@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkluxsmile=self.webpackChunkluxsmile||[]).push([[664],{5664:(e,i,s)=>{s.r(i),s.d(i,{default:()=>n});s(9060);var a=s(3496),c=s(3336),l=s(2496);function n(){return(0,l.jsxs)("div",{className:"echipa",children:[(0,l.jsx)(a.c,{link:"/echipa"}),(0,l.jsx)("main",{children:"Echipa (datele trebuie preluate din backend)"}),(0,l.jsx)(c.c,{})]})}}}]);
+//# sourceMappingURL=664.e0b1e871.chunk.js.map
