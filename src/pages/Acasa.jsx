@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Principala from '../assets/img/Principala.jpg';
 import BunVenit from '../assets/img/bunVenit.png';
@@ -13,6 +13,7 @@ import Footer from '../components/Footer';
 
 
 export default function Acasa() {
+    const [load, setLoad] = useState(false)
     const scrollTo = () => {
         const element = document.getElementById('scroll')
         element.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -89,8 +90,8 @@ export default function Acasa() {
                 <form>
                     <h3> Pentru programare</h3>
                     <input type='text' placeholder='Numele și prenumele' />
-                    <input type='text' placeholder='Email-ul' />
-                    <input type='text' placeholder='Numar de telefon' />
+                    <input type='email' placeholder='Email-ul' />
+                    <input type='number' placeholder='Numar de telefon' />
                     <select defaultValue="Selectați serviciul">
                         <option value="Selectați serviciul">Selectați serviciul</option>
                         <option value="Igiena orală">Igiena orală</option>

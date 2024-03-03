@@ -7,7 +7,6 @@ import { FaWhatsapp , FaViber } from "react-icons/fa";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import Navbar from '../../components/NavbarRu';
 import Footer from '../../components/FooterRu';
 
@@ -88,20 +87,16 @@ export default function ContacteRu() {
             </div>
           </div>
         </div>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2719.1926712502714!2d28.80841298767208!3d47.03644996829891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97dbf6f305e5d%3A0xfd5bcf47c79ec7c0!2zU3RyYWRhIElvbiBDcmVhbmfEgyA3LCBDaGnImWluxIN1LCDQnNC-0LvQtNC-0LLQsA!5e0!3m2!1sru!2s!4v1708094932304!5m2!1sru!2s" 
+          width="100%" 
+          height="500" 
+          style={{border: 0}} 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </main>
-      <div className='map'>
-        <MapContainer center={[47, 28.85]} zoom={13} style={{ height: '500px', width: '70%', margin: '25px 15%' }}>
-          <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          />
-          <Marker position={[47, 28.85]}>
-            <Popup>
-                Вот это место.
-            </Popup>
-          </Marker>
-        </MapContainer>
-      </div>
       <Footer />
     </div>
   )

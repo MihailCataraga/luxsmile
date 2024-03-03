@@ -1,1 +1,8 @@
-Echipa page content de adaugat dupa ce face Dima
+Dima: 
+la edit info imaginea nu e specificata
+la stergerea angajatului, functioneaza, dar poza nu se sterge din database/img/
+
+
+
+Am Adugat:
+

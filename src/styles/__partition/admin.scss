@@ -1,0 +1,245 @@
+.admin{
+    position: relative;
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 12vw;
+        border-bottom: 2px solid $blueColor;
+        .boxLogo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon{
+                font-size: 30px;
+                color: $blueColor;
+            }
+            h1{
+                font-size: 30px;
+                color: $blueColor;
+            }
+        }
+        button{
+            border: 1px solid $blueColor;
+            background-color: #ffffff;
+            padding: 5px 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover{
+            box-shadow: 0 0 5px 1px $blueColor;
+        }
+    }
+    main{
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 68px);
+        .tools{
+            min-width: 250px;
+            background-color: #646d70;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            button{
+                border: 1px solid $blueColor;
+                background-color: #ffffff;
+                padding: 5px 10px;
+                font-size: 16px;
+                border-radius: 5px;
+            }
+            .tool{
+                margin: 20px 0 10px 10%;
+            }
+            .subcategory{
+                margin: 10px 0 10px 15%;
+                padding: 3px 8px;
+            }
+        }
+        .datas{
+            width: calc(100vw - 250px);
+            background-color: $bgColor;
+            height: 100%;
+            position: relative;
+            #employees{
+                width: 100%;
+                border-collapse: collapse;
+                thead{
+                    tr{
+                        th{
+                            text-align: center;
+                            border: 1px solid black;
+                        }
+                    }
+                }
+                tbody{
+                    tr{
+                        td{
+                            text-align: center;
+                            border: 1px solid black;
+                            margin: 0;
+                            img{
+                                width: 70px;
+                                height: 70px;
+                            }
+                            .icon{
+                                font-size: 24px;
+                                margin: 10px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }  
+            }
+            .page{
+                position: absolute;
+                right: 40px;
+                bottom: 10px;
+                div{
+                    display: flex;
+                    align-items: center;
+                    button{
+                        margin: 0 10px;
+                        padding: 2px 6px 0 6px;
+                        .icon{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                P{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    .infoEmployeeBox{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        z-index: 2;
+        .infoEmployee{
+            background-color: $bgColor;
+            border: 3px solid $blueColor;
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            img{
+                width: 300px;
+                margin-right: 20px;
+            }
+            .info{
+                p{
+                    color: black;
+                    font-size: 16px;
+                    margin: 4px 0;
+                }
+                button{
+                    margin-top: 20px;
+                    margin-right: 5px;
+                    border: 1px solid $blueColor;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                }
+                input{
+                    display: block;
+                }
+            }
+        }
+    }
+    .addNewEmployee{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(2px);
+        z-index: 2;
+        .employeeData{
+            background-color: $bgColor;
+            border: 3px solid $blueColor;
+            border-radius: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            .addData{
+                display: flex;
+                align-items: center;
+                div{
+                    p{
+                        color: black;
+                        font-size: 16px;
+                        margin: 4px 0;
+                    }
+                    input{
+                        display: block;
+                    }
+                    .alert{
+                        color: rgb(189, 96, 96);
+                    }
+                }
+                img{
+                    width: 250px;
+                    margin-left: 20px;
+                }
+            }
+            div{
+                button{
+                    margin-top: 20px;
+                    margin-right: 5px;
+                    border: 1px solid $blueColor;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                }
+            }
+            
+        }
+    }
+    
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20% 0;
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $blueColor;
+        font-size: 28px;
+        margin-bottom: 10px;
+        .icon{
+            font-size: 44px;
+        }
+    }
+    h3{
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        input{
+            margin: 5px;
+        }
+    }
+}

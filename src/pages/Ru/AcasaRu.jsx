@@ -89,8 +89,8 @@ export default function AcasaRu() {
                 <form>
                     <h3>Для планирования</h3>
                     <input type='text' placeholder='Имя и фамилия' />
-                    <input type='text' placeholder='Электронная почта' />
-                    <input type='text' placeholder='Номер телефона' />
+                    <input type='email' placeholder='Электронная почта' />
+                    <input type='number' placeholder='Номер телефона' />
                     <select defaultValue="Selectați serviciul">
                         <option value="Selectați serviciul">Выберите услугу</option>
                         <option value="Igiena orală">Гигиена полости рта</option>
