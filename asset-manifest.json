@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/luxsmile/static/css/main.7e48a2ed.css",
-    "main.js": "/luxsmile/static/js/main.59b4d790.js",
+    "main.css": "/luxsmile/static/css/main.9f6c1edd.css",
+    "main.js": "/luxsmile/static/js/main.f0afe19a.js",
     "static/js/204.ea2d4651.chunk.js": "/luxsmile/static/js/204.ea2d4651.chunk.js",
     "static/js/304.db412a23.chunk.js": "/luxsmile/static/js/304.db412a23.chunk.js",
     "static/js/664.e0b1e871.chunk.js": "/luxsmile/static/js/664.e0b1e871.chunk.js",
@@ -24,12 +24,13 @@
     "static/js/440.bb04fc2e.chunk.js": "/luxsmile/static/js/440.bb04fc2e.chunk.js",
     "static/js/652.ad454add.chunk.js": "/luxsmile/static/js/652.ad454add.chunk.js",
     "static/js/32.f06d0964.chunk.js": "/luxsmile/static/js/32.f06d0964.chunk.js",
-    "static/js/128.2a4339fc.chunk.js": "/luxsmile/static/js/128.2a4339fc.chunk.js",
-    "static/js/484.a12c069b.chunk.js": "/luxsmile/static/js/484.a12c069b.chunk.js",
-    "static/js/800.5270553f.chunk.js": "/luxsmile/static/js/800.5270553f.chunk.js",
+    "static/js/128.ba353ac7.chunk.js": "/luxsmile/static/js/128.ba353ac7.chunk.js",
+    "static/js/484.304a2e14.chunk.js": "/luxsmile/static/js/484.304a2e14.chunk.js",
+    "static/js/912.6c98ebfc.chunk.js": "/luxsmile/static/js/912.6c98ebfc.chunk.js",
+    "static/js/840.f83ccd6d.chunk.js": "/luxsmile/static/js/840.f83ccd6d.chunk.js",
     "static/js/880.7470ada7.chunk.js": "/luxsmile/static/js/880.7470ada7.chunk.js",
-    "static/js/912.b151ceb9.chunk.js": "/luxsmile/static/js/912.b151ceb9.chunk.js",
-    "static/js/788.09d26155.chunk.js": "/luxsmile/static/js/788.09d26155.chunk.js",
+    "static/js/532.2d9ba1e8.chunk.js": "/luxsmile/static/js/532.2d9ba1e8.chunk.js",
+    "static/js/788.8303d10c.chunk.js": "/luxsmile/static/js/788.8303d10c.chunk.js",
     "static/js/556.54bcbc39.chunk.js": "/luxsmile/static/js/556.54bcbc39.chunk.js",
     "static/media/Principala.jpg": "/luxsmile/static/media/Principala.0cf93590221266d8e74d.jpg",
     "static/media/bunVenit.png": "/luxsmile/static/media/bunVenit.f36765a9e43b23092c15.png",
@@ -45,8 +46,8 @@
     "static/media/filtru.png": "/luxsmile/static/media/filtru.1387ac80a22fda1a068b.png",
     "static/media/iconServicii4.png": "/luxsmile/static/media/iconServicii4.5c8ca625aea108dfe9cc.png",
     "index.html": "/luxsmile/index.html",
-    "main.7e48a2ed.css.map": "/luxsmile/static/css/main.7e48a2ed.css.map",
-    "main.59b4d790.js.map": "/luxsmile/static/js/main.59b4d790.js.map",
+    "main.9f6c1edd.css.map": "/luxsmile/static/css/main.9f6c1edd.css.map",
+    "main.f0afe19a.js.map": "/luxsmile/static/js/main.f0afe19a.js.map",
     "204.ea2d4651.chunk.js.map": "/luxsmile/static/js/204.ea2d4651.chunk.js.map",
     "304.db412a23.chunk.js.map": "/luxsmile/static/js/304.db412a23.chunk.js.map",
     "664.e0b1e871.chunk.js.map": "/luxsmile/static/js/664.e0b1e871.chunk.js.map",
@@ -69,15 +70,16 @@
     "440.bb04fc2e.chunk.js.map": "/luxsmile/static/js/440.bb04fc2e.chunk.js.map",
     "652.ad454add.chunk.js.map": "/luxsmile/static/js/652.ad454add.chunk.js.map",
     "32.f06d0964.chunk.js.map": "/luxsmile/static/js/32.f06d0964.chunk.js.map",
-    "128.2a4339fc.chunk.js.map": "/luxsmile/static/js/128.2a4339fc.chunk.js.map",
-    "484.a12c069b.chunk.js.map": "/luxsmile/static/js/484.a12c069b.chunk.js.map",
-    "800.5270553f.chunk.js.map": "/luxsmile/static/js/800.5270553f.chunk.js.map",
+    "128.ba353ac7.chunk.js.map": "/luxsmile/static/js/128.ba353ac7.chunk.js.map",
+    "484.304a2e14.chunk.js.map": "/luxsmile/static/js/484.304a2e14.chunk.js.map",
+    "912.6c98ebfc.chunk.js.map": "/luxsmile/static/js/912.6c98ebfc.chunk.js.map",
+    "840.f83ccd6d.chunk.js.map": "/luxsmile/static/js/840.f83ccd6d.chunk.js.map",
     "880.7470ada7.chunk.js.map": "/luxsmile/static/js/880.7470ada7.chunk.js.map",
-    "912.b151ceb9.chunk.js.map": "/luxsmile/static/js/912.b151ceb9.chunk.js.map",
-    "788.09d26155.chunk.js.map": "/luxsmile/static/js/788.09d26155.chunk.js.map"
+    "532.2d9ba1e8.chunk.js.map": "/luxsmile/static/js/532.2d9ba1e8.chunk.js.map",
+    "788.8303d10c.chunk.js.map": "/luxsmile/static/js/788.8303d10c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7e48a2ed.css",
-    "static/js/main.59b4d790.js"
+    "static/css/main.9f6c1edd.css",
+    "static/js/main.f0afe19a.js"
   ]
 }
