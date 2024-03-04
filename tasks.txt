@@ -1,6 +1,5 @@
 Dima: 
-la edit info imaginea nu e specificata
-la stergerea angajatului, functioneaza, dar poza nu se sterge din database/img/
+edit trebuie de facut
 
 
 

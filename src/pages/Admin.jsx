@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FaTooth, FaChevronLeft, FaChevronRight, FaTrashAlt } from 'react-icons/fa';
 import { IoMdSettings } from "react-icons/io";
+import { MdFiberNew, MdMarkEmailRead  } from "react-icons/md";
 
 export default function Admin() {
     const jwToken = localStorage.getItem('jwToken')
@@ -9,9 +10,14 @@ export default function Admin() {
     const [addNewEmployee, setAddNewEmployee] = useState(false)
     const [previewImageUrl, setPreviewImageUrl] = useState(null);
     const [message, setMessage] = useState(false)
+    const [messages, setMessages] = useState([])
+    const [content, setContent] = useState('')
+    var [newMessages, setNewMessages] = useState(0)
     //????????????????????????????????????????????????
     const [numOfPage, setNumOfPage] = useState(1)
     const numMaxOfPages = Math.ceil(employees.length / 10)
+    const numMaxOfMessages = Math.ceil(messages.length / 15)
+    const numOfMessagesPerPage = 15
     const numOfEmployeesPerPage = 10
     const [infoEmployee, setInfoEmployee] = useState({})
     const [edit, setEdit] = useState(false)
@@ -112,17 +118,26 @@ export default function Admin() {
     useEffect(() => {
         const data = localStorage.getItem('data')
         if (data === 'all') {
-            getAllEmployees()
+            getAllEmployees();
+            setContent('employees')
         } else if (data === 'Administratie') {
+            setContent('employees')
             getEmployees('Administratie')
         } else if (data === 'Medic Stomatolog') {
+            setContent('employees')
             getEmployees('Medic Stomatolog')
         } else if (data === 'Tehnician Dentar') {
+            setContent('employees')
             getEmployees('Tehnician Dentar')
         } else if (data === 'Asistent Medical') {
+            setContent('employees')
             getEmployees('Asistent Medical')
+        } else if (data === 'Messages') {
+            setContent('messages')
         }
-        setNumOfPage(localStorage.getItem('page'))
+        setNumOfPage(localStorage.getItem('page') === null ? '1' : localStorage.getItem('page'))
+        getAllMessages()
+
     }, [])
 
     // numOfPage minus
@@ -135,14 +150,22 @@ export default function Admin() {
     }
     // numOfPage plus
     const getNext = () => {
-        if (Number(numOfPage) < numMaxOfPages) {
-            setNumOfPage(Number(numOfPage) + 1)
-            localStorage.setItem('page', (Number(numOfPage) + 1));
+        if(content === 'employees') {
+            if (Number(numOfPage) < numMaxOfPages) {
+                setNumOfPage(Number(numOfPage) + 1)
+                localStorage.setItem('page', (Number(numOfPage) + 1));
+            }
+        } else if(content === 'messages') {
+            if (Number(numOfPage) < numMaxOfMessages) {
+                setNumOfPage(Number(numOfPage) + 1)
+                localStorage.setItem('page', (Number(numOfPage) + 1));
+            }
         }
+        
 
     }
     const tenNewEmployees = employees.slice((numOfPage - 1) * numOfEmployeesPerPage, numOfPage * numOfEmployeesPerPage,)
-
+    const tenMessages = messages.slice((numOfPage - 1) * numOfMessagesPerPage, numOfPage * numOfMessagesPerPage)
     const getEmployeesByPages = (param, param2) => {
         param(param2);
         localStorage.setItem('page', 1);
@@ -295,6 +318,49 @@ export default function Admin() {
             setMessage(text)
         }
     }
+
+    // Get All messages 
+    const getAllMessages = async () => {
+        if(jwToken) {
+            try{
+                const response = await fetch('http://localhost:8080/mesaje', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({jwToken})
+                })
+                const data = await response.json()
+                setMessages(data);
+                setNewMessages(newMessages = 0);
+                data.find(mes => {
+                    if(mes.read_status === 1) {
+                        setNewMessages(newMessages = newMessages + 1)
+                    }
+                });
+                
+            } catch (error) {
+                console.error('Eroare la trimiterea tokenului la server:', error);
+            }
+        } 
+    }
+    const readMessage = async (id) => {
+        if(jwToken) {
+            try{
+                const response = await fetch(`http://localhost:8080/mesaje/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({jwToken})
+                })
+                const data = await response.json()
+                window.location.reload()
+            } catch (error) {
+                console.error('Eroare la trimiterea tokenului la server:', error);
+            }
+        }
+    }
     return (
         <div className='admin'>
             <header className='logo'>
@@ -307,21 +373,24 @@ export default function Admin() {
             <main>
                 <div className='tools'>
                     <button className='tool' onClick={() => setAddNewEmployee(true)}>Adauga un angajat nou</button>
-                    <button className='tool' onClick={() => { getEmployeesByPages(getAllEmployees); setNumOfPage(1); localStorage.setItem("data", "all") }}>Personal</button>
-                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Administratie'); setNumOfPage(1); localStorage.setItem("data", "Administratie") }}>Administrație</button>
-                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Medic Stomatolog'); setNumOfPage(1); localStorage.setItem("data", "Medic Stomatolog") }}>Medicii Stomatologi</button>
-                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Tehnician Dentar'); setNumOfPage(1); localStorage.setItem("data", "Tehnician Dentar") }}>Tehnicieni Dentari</button>
-                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Asistent Medical'); setNumOfPage(1); localStorage.setItem("data", "Asistent Medical") }}>Asistenți Medicali</button>
+                    <button className='tool' onClick={() => { getEmployeesByPages(getAllEmployees); setNumOfPage(1); setContent('employees'); localStorage.setItem("data", "all") }}>Personal</button>
+                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Administratie'); setNumOfPage(1); setContent('employees'); localStorage.setItem("data", "Administratie") }}>Administrație</button>
+                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Medic Stomatolog'); setNumOfPage(1); setContent('employees'); localStorage.setItem("data", "Medic Stomatolog") }}>Medicii Stomatologi</button>
+                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Tehnician Dentar'); setNumOfPage(1); setContent('employees'); localStorage.setItem("data", "Tehnician Dentar") }}>Tehnicieni Dentari</button>
+                    <button className='subcategory' onClick={() => { getEmployeesByPages(getEmployees, 'Asistent Medical'); setNumOfPage(1); setContent('employees'); localStorage.setItem("data", "Asistent Medical") }}>Asistenți Medicali</button>
+                    <button className='tool' id='messages' onClick={() => {getAllMessages(); setNumOfPage(1); setContent('messages'); localStorage.setItem("data", "Messages")}}><p>{newMessages}</p>Programari</button>
                 </div>
                 <div className='datas'>
-                    <table id='employees'>
+                    {content === 'employees' 
+                    ? <table id='employees'>
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Imagine</th>
                                 <th>Nume</th>
                                 <th>Specialitate</th>
-                                <th>functie</th>
+                                <th>Functie</th>
+                                <th>Optiuni</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -339,13 +408,50 @@ export default function Admin() {
                             })}
                         </tbody>
                     </table>
+                    : null}
+                    {content === 'messages'
+                    ? <table id='messages'>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Nume Client</th>
+                                <th>Data</th>
+                                <th>Telefon</th>
+                                <th>Email</th>
+                                <th>Serviciu</th>
+                                <th>Mesaj</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {tenMessages.map((mess) => {
+                                return (
+                                    <tr key={mess.id}>
+                                        <td>{mess.id}</td>
+                                        <td>{mess.nume_client}</td>
+                                        <td>{mess.data_adaugare}</td>
+                                        <td>{mess.telefon}</td>
+                                        <td>{mess.email}</td>
+                                        <td>{mess.serviciu}</td>
+                                        <td>{mess.mesaj}</td>
+                                        <td>{mess.read_status === 1 
+                                            ? <MdFiberNew onClick={() => readMessage(mess.id)} className='icon new' />
+                                            : <MdMarkEmailRead className='icon old' />
+                                            }
+                                        </td>
+                                    </tr>
+                                )
+                            })}
+                        </tbody>
+                    </table>
+                    : null}
                     <div className='page'>
                         <div>
                             <button onClick={() => { getBack() }}><FaChevronLeft className='icon' /></button>
                             <input type='number' value={numOfPage} min={1} max={numMaxOfPages} onChange={numOfPageFromInput} />
                             <button onClick={() => { getNext() }}><FaChevronRight className='icon' /></button>
                         </div>
-                        <p>Numarul maxim de pagini: {numMaxOfPages}</p>
+                        <p>Numarul maxim de pagini: {content === 'employees' ? numMaxOfPages : numMaxOfMessages}</p>
                     </div>
                 </div>
             </main>
@@ -353,7 +459,7 @@ export default function Admin() {
                 <div className='infoEmployee'>
                     <img src={infoEmployee.img} alt='Employee img' />
                     <div className='info'>
-                        <input type='file' accept="image/*" />
+                        {edit && <input type='file' accept="image/*" />}
                         <p>Nume: {infoEmployee.nume}</p>
                         {edit && <input type='text' name='nume' onChange={handleChangeData} placeholder={infoEmployee.nume} />}
                         <p>Functie: {infoEmployee.functie}</p>

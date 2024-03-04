@@ -42,11 +42,22 @@
             flex-direction: column;
             align-items: flex-start;
             button{
+                position: relative;
                 border: 1px solid $blueColor;
                 background-color: #ffffff;
                 padding: 5px 10px;
                 font-size: 16px;
                 border-radius: 5px;
+                p{
+                    position: absolute;
+                    right: -10px;
+                    top: -12px;
+                    background-color: green;
+                    padding: 2px 5px;
+                    font-size: 12px;
+                    border-radius: 5px;
+                    color: white;
+                }
             }
             .tool{
                 margin: 20px 0 10px 10%;
@@ -61,7 +72,7 @@
             background-color: $bgColor;
             height: 100%;
             position: relative;
-            #employees{
+            #employees, #messages{
                 width: 100%;
                 border-collapse: collapse;
                 thead{
@@ -86,6 +97,12 @@
                                 font-size: 24px;
                                 margin: 10px;
                                 cursor: pointer;
+                            }
+                            .new{
+                                color: green;
+                            }
+                            .old{
+                                color: grey;
                             }
                         }
                     }
