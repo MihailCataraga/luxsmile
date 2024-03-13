@@ -145,12 +145,21 @@
             width: 60vw;
             background-color: #ffffff;
             border-radius: 15px;
+            p{
+                margin: 10px 30px;
+            }
             h3{
                 color: $blackColor;
                 font-size: 25px;
                 margin: 20px 50px;
             }
-            input{
+            .nume,
+            .telefon,
+            .email,
+            .serviciu {
+                border: 1px solid red;
+            }
+            input, textarea{
                 margin: 10px 25px;
                 width: calc(100% - 80px);
                 height: 48px;
@@ -270,7 +279,7 @@
                 h3{
                     font-size: 20px;
                 }
-                input{
+                input, textarea{
                     height: 36px;
                 }
                 select{
@@ -376,7 +385,7 @@
                     font-size: 18px;
                     text-align: center;
                 }
-                input{
+                input, textarea{
                     height: 30px;
                 }
                 select{

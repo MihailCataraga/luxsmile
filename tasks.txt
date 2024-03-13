@@ -1,7 +1,2 @@
-Dima: 
-edit trebuie de facut
-
-
-
-Am Adugat:
+EchpaRu.jsx trebuie de preluat datele rusesti
 

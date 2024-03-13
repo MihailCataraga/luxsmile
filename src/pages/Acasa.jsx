@@ -12,14 +12,75 @@ import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 
 
-export default function Acasa() {
-    const [load, setLoad] = useState(false)
+export default function Acasa(props) {
+    const backend = props.backend
+    const [nume, setNume] = useState('')
+    const [telefon, setTelefon] = useState('')
+    const [email, setEmail] = useState('')
+    const [serviciu, setServiciu] = useState('')
+    const [date, setDate] = useState({
+        nume_client: '',
+        telefon: '',
+        email: '',
+        serviciu: 'Selectați serviciul',
+        mesaj: ''
+    })
+    const [message, setMessage] = useState('')
     const scrollTo = () => {
         const element = document.getElementById('scroll')
         element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+    //Edit datas
+    const handleChangeData = (event) => {
+        const { name, value } = event.target;
+        setDate({
+            ...date,
+            [name]: value
+        });
+    };
+    const sendNewMessage = (event) =>{
+        event.preventDefault();
+        if(date.nume_client === '') {
+            setNume('nume')
+        } else {
+            setNume('')
+        }
+        if(date.telefon === '') {
+            setTelefon('telefon')
+        } else {
+            setTelefon('')
+        }
+        if(date.email === '') {
+            setEmail('email')
+        } else {
+            setEmail('')
+        }
+        if(date.serviciu === 'Selectați serviciul') {
+            setServiciu('serviciu')
+        } else {
+            setServiciu('')
+        }
+        console.log(date)
+        if (date.nume_client !== '' && date.telefon !== '' && date.email !== '' && date.serviciu !== '') {
+            const sendDatas = async () => {
+                const res = await fetch(`${backend}/adaugaMesaj`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({nume_client: date.nume_client, telefon: date.telefon, email: date.email, serviciu: date.serviciu, mesaj: date.mesaj})
+                })
+                const data = await res.json()
+                setMessage(data.message)
+                setTimeout(() => {
+                    window.location.reload()
+                }, 2000)
+            }  
+            sendDatas()
+        }
     }
     return (
         <div className='home'>
@@ -89,10 +150,11 @@ export default function Acasa() {
                 </div>
                 <form>
                     <h3> Pentru programare</h3>
-                    <input type='text' placeholder='Numele și prenumele' />
-                    <input type='email' placeholder='Email-ul' />
-                    <input type='number' placeholder='Numar de telefon' />
-                    <select defaultValue="Selectați serviciul">
+                    <p>{message}</p>
+                    <input type='text' className={nume} name='nume_client' placeholder='Numele și prenumele' onChange={handleChangeData} />
+                    <input type='email' className={email} name='email' placeholder='Email-ul'  onChange={handleChangeData} />
+                    <input type='number' className={telefon} name='telefon' placeholder='Numar de telefon'  onChange={handleChangeData} />
+                    <select name='serviciu' className={serviciu} defaultValue="Selectați serviciul"  onChange={handleChangeData}>
                         <option value="Selectați serviciul">Selectați serviciul</option>
                         <option value="Igiena orală">Igiena orală</option>
                         <option value="Implantologia">Implantologia</option>
@@ -101,7 +163,8 @@ export default function Acasa() {
                         <option value="Imagistica dentară">Imagistica dentară</option>
                         <option value="Stomatologie copii">Stomatologie copii</option>
                     </select>
-                    <button>Trimite Informațiile</button>
+                    <textarea name='mesaj' placeholder='Mesajul Dumneavoastră'  onChange={handleChangeData}></textarea>
+                    <button id='button' onClick={sendNewMessage}>Trimite Informațiile</button>
                 </form>
             </div>
             <Footer />

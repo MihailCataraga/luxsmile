@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Principala from '../../assets/img/Principala.jpg';
 import BunVenit from '../../assets/img/bunVenit.png';
 import IconServicii1 from '../../assets/img/iconServicii1.png';
@@ -12,13 +12,75 @@ import Navbar from '../../components/NavbarRu';
 import Footer from '../../components/FooterRu';
 
 
-export default function AcasaRu() {
+export default function AcasaRu(props) {
+    const backend = props.backend
+    const [nume, setNume] = useState('')
+    const [telefon, setTelefon] = useState('')
+    const [email, setEmail] = useState('')
+    const [serviciu, setServiciu] = useState('')
+    const [date, setDate] = useState({
+        nume_client: '',
+        telefon: '',
+        email: '',
+        serviciu: 'Selectați serviciul',
+        mesaj: ''
+    })
+    const [message, setMessage] = useState('')
     const scrollTo = () => {
         const element = document.getElementById('scroll')
         element.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+    //Edit datas
+    const handleChangeData = (event) => {
+        const { name, value } = event.target;
+        setDate({
+            ...date,
+            [name]: value
+        });
+    };
+    const sendNewMessage = (event) =>{
+        event.preventDefault();
+        if(date.nume_client === '') {
+            setNume('nume')
+        } else {
+            setNume('')
+        }
+        if(date.telefon === '') {
+            setTelefon('telefon')
+        } else {
+            setTelefon('')
+        }
+        if(date.email === '') {
+            setEmail('email')
+        } else {
+            setEmail('')
+        }
+        if(date.serviciu === 'Selectați serviciul') {
+            setServiciu('serviciu')
+        } else {
+            setServiciu('')
+        }
+        console.log(date)
+        if (date.nume_client !== '' && date.telefon !== '' && date.email !== '' && date.serviciu !== '') {
+            const sendDatas = async () => {
+                const res = await fetch(`${backend}/adaugaMesaj`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({nume_client: date.nume_client, telefon: date.telefon, email: date.email, serviciu: date.serviciu, mesaj: date.mesaj})
+                })
+                const data = await res.json()
+                setMessage(data.message)
+                setTimeout(() => {
+                    window.location.reload()
+                }, 2000)
+            }  
+            sendDatas()
+        }
     }
     return (
         <div className='home'>
@@ -88,10 +150,11 @@ export default function AcasaRu() {
                 </div>
                 <form>
                     <h3>Для планирования</h3>
-                    <input type='text' placeholder='Имя и фамилия' />
-                    <input type='email' placeholder='Электронная почта' />
-                    <input type='number' placeholder='Номер телефона' />
-                    <select defaultValue="Selectați serviciul">
+                    <p>{message}</p>
+                    <input type='text' className={nume} name='nume_client' placeholder='Имя и фамилия' onChange={handleChangeData} />
+                    <input type='email' className={email} name='email' placeholder='Электронная почта' onChange={handleChangeData} />
+                    <input type='number' className={telefon} name='telefon' placeholder='Номер телефона' onChange={handleChangeData} />
+                    <select name='serviciu' className={serviciu} defaultValue="Selectați serviciul" onChange={handleChangeData}>
                         <option value="Selectați serviciul">Выберите услугу</option>
                         <option value="Igiena orală">Гигиена полости рта</option>
                         <option value="Implantologia">Имплантология</option>
@@ -100,7 +163,8 @@ export default function AcasaRu() {
                         <option value="Imagistica dentară">Стоматологическая визуализация</option>
                         <option value="Stomatologie copii Inhalosedare și anestezia generala">Детская стоматология</option>
                     </select>
-                    <button>Отправить информацию</button>
+                    <textarea name='mesaj' placeholder='Ваше сообщение'  onChange={handleChangeData}></textarea>
+                    <button id='button' onClick={sendNewMessage}>Отправить информацию</button>
                 </form>
             </div>
             <Footer />

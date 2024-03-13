@@ -2,6 +2,41 @@
     main{
         font-size: 30px;
         text-align: center;
-        margin: 200px 0;
+        padding: 20px 12vw;
+        h1{
+            font-size: 36px;
+            margin-top: 20px;
+        }
+        .all{
+            display: flex;
+            flex-direction: column;
+            h2{
+                font-size: 24px;
+                color: $blueColor;
+                margin: 20px 0;
+            }
+            .employee{
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                div{
+                    background-color: $bgColor;
+                    width: 250px;
+                    height: 320px;
+                    img{
+                        width: 100%;
+                    }
+                    h4{
+                        font-size: 18px;
+                    }
+                    p{
+                        font-size: 14px;
+                        color: $blueColor;
+                    }
+                }
+            }
+        }
     }
 }

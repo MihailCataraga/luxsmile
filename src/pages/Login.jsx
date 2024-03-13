@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { FaTooth } from "react-icons/fa";
 
-export default function Login() {
+export default function Login(props) {
+    const backend = props.backend;
     const [message, setMessage] = useState('');
     const [formData, setFormData] = useState({
         username: '',
@@ -25,7 +26,7 @@ export default function Login() {
         }else if(formData.password === '') {
             setMessage("Password este gol")
         } else {
-            fetch('http://localhost:8080/login', {
+            fetch(`${backend}/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -51,12 +51,13 @@ const Login = React.lazy(() => import('./pages/Login'))
 // import Login from './pages/Login';
 
 function App() {
+  const backend = 'http://localhost:8080'
   return (
     <div className="App">
       <HashRouter>
         <Suspense fallback={<Loading />}>
           <Routes>
-            <Route path='/' element={<Acasa />} />
+            <Route path='/' element={<Acasa backend={backend} />} />
             <Route path='/despreNoi' element={<DespreNoi />} />
             <Route path='/igienaOrala' element={<IgienaOrala />} />
             <Route path='/implantologia' element={<Implantologia />} />
@@ -64,11 +65,11 @@ function App() {
             <Route path='/ortodontiaDentara' element={<OrtodontiaDentara />} />
             <Route path='/imagisticaDentara' element={<ImagisticaDentara />} />
             <Route path='/stomatologieCopii' element={<StomatologieCopii />} />
-            <Route path='/echipa' element={<Echipa />} />
+            <Route path='/echipa' element={<Echipa backend={backend} />} />
             <Route path='/contacte' element={<Contacte />} />
             <Route path='/politics' element={<Politics />} />
             {/* Ru pages */}
-            <Route path='/ru/' element={<AcasaRu />} />
+            <Route path='/ru/' element={<AcasaRu backend={backend} />} />
             <Route path='/ru/despreNoi' element={<DespreNoiRu />} />
             <Route path='/ru/igienaOrala' element={<IgienaOralaRu />} />
             <Route path='/ru/implantologia' element={<ImplantologiaRu />} />
@@ -76,12 +77,12 @@ function App() {
             <Route path='/ru/ortodontiaDentara' element={<OrtodontiaDentaraRu />} />
             <Route path='/ru/imagisticaDentara' element={<ImagisticaDentaraRu />} />
             <Route path='/ru/stomatologieCopii' element={<StomatologieCopiiRu />} />
-            <Route path='/ru/echipa' element={<EchipaRu />} />
+            <Route path='/ru/echipa' element={<EchipaRu backend={backend} />} />
             <Route path='/ru/contacte' element={<ContacteRu />} />
             <Route path='/ru/politics' element={<PoliticsRu />} />
             {/* Admin */}
-            <Route path='/login' element={<Login />} />
-            <Route path='/admin' element={<Admin />} />
+            <Route path='/login' element={<Login backend={backend} />} />
+            <Route path='/admin' element={<Admin backend={backend} />} />
           </Routes>
         </Suspense>
       </HashRouter>
