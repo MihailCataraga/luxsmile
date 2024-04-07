@@ -45,7 +45,7 @@ export default function Echipa(props) {
             {admin.map((empl) => {
               return (
                 <div key={empl.id}>
-                  <img src={empl.img} />
+                  <img src={empl.img} alt='Img' />
                   <h4>{empl.nume}</h4>
                   <p>{empl.specialitate}</p>
                 </div>
@@ -57,7 +57,7 @@ export default function Echipa(props) {
             {med.map((empl) => {
               return (
                 <div key={empl.id}>
-                  <img src={empl.img} />
+                  <img src={empl.img} alt='Img' />
                   <h4>{empl.nume}</h4>
                   <p>{empl.specialitate}</p>
                 </div>
@@ -69,7 +69,7 @@ export default function Echipa(props) {
             {teh.map((empl) => {
               return (
                 <div key={empl.id}>
-                  <img src={empl.img} />
+                  <img src={empl.img} alt='Img' />
                   <h4>{empl.nume}</h4>
                   <p>{empl.specialitate}</p>
                 </div>
@@ -81,7 +81,7 @@ export default function Echipa(props) {
             {asistent.map((empl) => {
               return (
                 <div key={empl.id}>
-                  <img src={empl.img} />
+                  <img src={empl.img} alt='Img' />
                   <h4>{empl.nume}</h4>
                   <p>{empl.specialitate}</p>
                 </div>

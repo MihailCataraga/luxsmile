@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import Loading from './components/Loading';
 // import Acasa from './pages/Acasa';
 const Acasa = React.lazy(() => import('./pages/Acasa'))
@@ -51,7 +51,7 @@ const Login = React.lazy(() => import('./pages/Login'))
 // import Login from './pages/Login';
 
 function App() {
-  const backend = 'http://localhost:8080'
+  const backend = 'http://3.8.206.30:8080'
   return (
     <div className="App">
       <HashRouter>
